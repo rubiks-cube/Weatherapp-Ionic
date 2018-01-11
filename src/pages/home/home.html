@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+ <ion-grid *ngIf="weather">
+  <ion-row>
+    <ion-col width-50 offset-25>
+      <h2 class="location">{{location}}</h2>
+      <div class="icon"><img src="./assets/images/{{weather[0].WeatherIcon}}.png"  alt=""></div>
+      <h3 class=desc>{{weather[0].WeatherText}}</h3>
+      <h1 class="temp">{{weather[0].Temperature.Metric.Value}}&deg;C</h1>
+      
+    </ion-col>
+ </ion-row>
+
+ <ion-row>
+  <ion-col width-100>
+    <ion-list>
+
+   <ion-item><strong>Precipitation:</strong>  {{weather[0].PrecipitationSummary.PastHour.Metric.Value}} mm</ion-item>
+   <ion-item><strong>RelativeHumidity:</strong>  {{weather[0].RelativeHumidity}}</ion-item>
+   <ion-item><strong>WindSpeed:</strong>  {{weather[0].Wind.Speed.Metric.Value}} km/h</ion-item>
+   <ion-item><strong>Visibility:</strong>  {{weather[0].Visibility.Metric.Value}} km</ion-item>
+   <ion-item><strong>Dewpoint:</strong> {{weather[0].DewPoint.Metric.Value}}&deg;C</ion-item>
+    
+    </ion-list>
+    
+  </ion-col>
+ </ion-row>
+
+
+
+
+
+
+
+ </ion-grid>
+ <br/>
+</ion-content>

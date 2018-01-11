@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="getResults()">
+  <ion-searchbar [(ngModel)]="search" name="search" autocomplete="on" placeholder="SearchLocation" (ionInput)="getItems($event)"></ion-searchbar>
+<ion-list *ngIf="showlist">
+  <ion-item *ngFor="let item of items |slice:0:5">
+   <button (click)="addInput(item)"> {{item.LocalizedName}},{{item.AdministrativeArea.ID}},{{item.Country.LocalizedName}}</button>
+  </ion-item>
+</ion-list>
+<button ion-button round   [disabled]="isenabled || showlist" type="submit" item-left> Save Changes </button>
+</form>
+</ion-content>
