@@ -1,7 +1,7 @@
 
 
 # Weatherapp-Ionic  
-A simple weather app using Ionic framework.  
+A simple hybrid weather app using Ionic framework.  
 ## Requirements:
 -Ionic  
 -AccuWeather API  
