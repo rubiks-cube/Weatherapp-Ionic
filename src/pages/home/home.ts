@@ -37,12 +37,12 @@ if(localStorage.getItem('itemfinalkey')==null){
 
 this.key=202396;
 this.location='Delhi'+','+'DL'+','+'IN';
-this.getWeather(this.key);
+//this.getWeather(this.key);
 }else{
 	
 	this.location=localStorage.getItem('itemfinalname');
 	this.key=localStorage.getItem('itemfinalkey');
-	this.getWeather(this.key);
+//	this.getWeather(this.key);
 }
 	
   }
@@ -53,9 +53,19 @@ this.getWeather(this.key);
   	this.weatherProvider.getDetails(key1).subscribe(data=>{
   	
   		this.weather=data;
-  		console.log(this.weather[0].WeatherText);
+  		
   	});
   }
+
+
+reload(){
+  
+ // console.log(this.weather[0].WeatherText);
+  this.setDefaults();
+  this.getWeather(this.key);
+  
+ // console.log(this.weather[0].WeatherText);
+}
 
 
   ionViewWillEnter(){

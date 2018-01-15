@@ -1,12 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="reload()">
+        <ion-icon name="refresh"></ion-icon>
+        
+      </button>
+    </ion-buttons>
+    <ion-title>
+      iWeather
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="home">
- <ion-grid *ngIf="weather">
-  <ion-row>
+ <ion-grid height="80px" *ngIf="weather">
+  <ion-row height-40>
     <ion-col width-50 offset-25>
       <h2 class="location">{{location}}</h2>
       <div class="icon"><img src="./assets/images/{{weather[0].WeatherIcon}}.png"  alt=""></div>
