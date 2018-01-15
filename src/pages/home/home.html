@@ -13,6 +13,9 @@
 </ion-header>
 
 <ion-content padding class="home">
+  <ion-fab right>
+  <button ion-fab color="secondary" (click)="onLocate()"><ion-icon name="locate"></ion-icon></button>
+</ion-fab>
  <ion-grid height="80px" *ngIf="weather">
   <ion-row height-40>
     <ion-col width-50 offset-25>

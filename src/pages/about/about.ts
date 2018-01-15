@@ -5,10 +5,15 @@ import { NavController } from 'ionic-angular';
   selector: 'page-about',
   templateUrl: 'about.html'
 })
+//ViewController for this view/dismiss()
+//ModalController for modals
 export class AboutPage {
 
   constructor(public navCtrl: NavController) {
 
   }
+
+
+
 
 }
