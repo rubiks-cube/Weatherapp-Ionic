@@ -39,7 +39,7 @@ if(localStorage.getItem('itemfinalkey')==null){
 	//sconsole.log(11);
 
 this.key=202396;
-this.location='Delhi'+','+'DL'+','+'IN';
+this.location='Delhi'+','+'DL'+','+'India';
 //this.getWeather(this.key);
 }else{
 	

@@ -7,7 +7,7 @@ export class WeatherProvider {
 apikey;
 
   constructor(public http: Http) {
-   this.apikey='1v4QZ9sBoAn2rjjK3kHIGPuWXIGTXU6c';
+   this.apikey='0r7cJb6eMKG0XSKs2kpwwE2c9883a0r1';
   }
 
 

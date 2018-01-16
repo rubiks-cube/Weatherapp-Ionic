@@ -30,8 +30,8 @@ lng:number;
 
   ionViewWillEnter() {
   
-    this.lat=this.truncateDecimals(this.navParams.data.lat,2);
-    this.lng=this.truncateDecimals(this.navParams.data.lng,2);
+    this.lat=this.truncateDecimals(this.navParams.data.lat,3);
+    this.lng=this.truncateDecimals(this.navParams.data.lng,3);
     
   }
 

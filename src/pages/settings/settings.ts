@@ -19,12 +19,12 @@ export class SettingsPage {
 items:any;
 itemfinal;
 search;
-showlist=true;;
+showlist;
 isenabled;
 keyfinal;
 
  constructor(public navCtrl: NavController, public navParams: NavParams,public weatherProvider:WeatherProvider) {
-  this.showlist=true;
+  //this.showlist=true;
     if(this.search != ''){
 
 this.isenabled=true; 
@@ -89,7 +89,8 @@ addInput(ite){
       localStorage.setItem('itemfinalkey',this.itemfinal.Key);
       localStorage.setItem('itemfinalname',name);
       this.search='';
-      console.log(localStorage.itemfinalname);
+      this.isenabled=true;
+      //console.log(localStorage.itemfinalname);
     this.navCtrl.push(HomePage);
   	}else{
 
